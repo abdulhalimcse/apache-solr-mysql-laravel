@@ -71,6 +71,9 @@ Create a solr collection or core
 # ./solr create -c testcollection -n data_driven_schema_configs
 ```
 
+After creating collection, show like below
+
+
 
 
 
