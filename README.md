@@ -78,7 +78,10 @@ Sample output:
 ![CreatedCollectionSuccessfulMessage](https://github.com/abdulhalimcse/solr-mysql-laravel/blob/master/img/created-solr-successfull-message.PNG)
 
 
+To access Solr Admin Panel from browser http://127.0.0.1:8983/solr/
+
+![show solr admin panel](https://github.com/abdulhalimcse/solr-mysql-laravel/blob/master/img/solr-admin-panel-view.PNG)
 
 
-
+## Step 3 - Importing/Indexing MySQL database in Solr using Data Import Handler 
 
