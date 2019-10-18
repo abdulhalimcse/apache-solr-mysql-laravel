@@ -73,6 +73,8 @@ Create a solr collection or core
 
 After creating collection, show like below
 
+![CreatedCollectionSuccessfulMessage](https://github.com/abdulhalimcse/solr-mysql-laravel/blob/master/img/created-solr-successfull-message.PNG)
+
 
 
 
