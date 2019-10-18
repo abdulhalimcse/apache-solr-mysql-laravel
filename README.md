@@ -143,7 +143,7 @@ Add this line
 
 # rename managed-schema to schema.xml and add some line
 
-Add this line after ```html <uniqueKey>id</uniqueKey> ```
+Add this line after ``` <uniqueKey>id</uniqueKey> ```
 
 ```html
 <field name="name" type="text_general" indexed="true" stored="true"/>
