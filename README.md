@@ -97,6 +97,8 @@ In solr-8.2.0, go to this path 'server/solr/testcollection/conf'
 
 # Edit solrconfig.xml
 
+Path : 'server/solr/testcollection/conf'
+
 Add this line
 
 ```html
@@ -113,4 +115,40 @@ Add this line
     </lst>
 </requestHandler>
 ```
+
+# create db-data-config.xml and add some line
+
+Path : 'server/solr/testcollection/conf'
+
+Add this line 
+
+```html
+<dataConfig>
+  <dataSource type="JdbcDataSource" 
+              driver="com.mysql.jdbc.Driver" 
+              url="jdbc:mysql://localhost:3306/testdb" 
+              user="root" 
+              password=""/>
+  <document>
+    <entity name="item"  
+      query="select * from item"
+      deltaQuery="select id from item where last_modified > '${dataimporter.last_index_time}'"
+      >
+       <field column="name" name="name" />
+       <field column="features" name="features"/>       
+    </entity>
+  </document>
+</dataConfig>
+```
+
+# rename managed-schema to schema.xml and add some line
+
+Add this line after <uniqueKey>id</uniqueKey>
+
+```html
+<field name="name" type="text_general" indexed="true" stored="true"/>
+<field name="features" type="text_general" indexed="true" stored="true"/>
+```
+
+
 
