@@ -59,13 +59,13 @@ Create a User and follow commond
 ```html
 # useradd solr
 # chown -R solr:solr solr-8.2.0
+# su - solr
 # cd solr-8.2.0/bin/
 ```
 
 Create a solr collection or core
 
 ```html
-# su - solr
 # ./solr start
 # ./solr status
 # ./solr create -c testcollection -n data_driven_schema_configs
