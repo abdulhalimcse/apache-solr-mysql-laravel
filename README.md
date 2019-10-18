@@ -106,10 +106,11 @@ Add this line
 
 Add this line 
 
+```html
 <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
     <lst name="defaults">
     <str name="config">db-data-config.xml</str>
     </lst>
 </requestHandler>
-
+```
 
