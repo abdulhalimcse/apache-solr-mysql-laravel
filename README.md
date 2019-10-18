@@ -85,3 +85,31 @@ To access Solr Admin Panel from browser http://127.0.0.1:8983/solr/
 
 ## Step 3 - Importing/Indexing MySQL database in Solr using Data Import Handler 
 
+# MySQL connector
+
+You need to download JDBC driver for MySQL from http://dev.mysql.com/downloads/connector/j/.
+
+Copy file form downloaded mysql-connector-java-5.1.48.jar for MySQL 5.x or mysql-connector-java-8.0.18 for mysql 8.x to the folder 'contrib/dataimporthandler/lib' in the folder solr-8.2.0. Create lib folder if needed.
+
+# Configure and Add File in your Collection Conf folder.
+
+In solr-8.2.0, go to this path 'server/solr/testcollection/conf'
+
+# Edit solrconfig.xml
+
+Add this line
+
+```html
+<lib dir="${solr.install.dir:../../../..}/contrib/dataimporthandler/lib" regex=".*\.jar" />
+<lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-dataimporthandler-.*\.jar" />
+```
+
+Add this line 
+
+<requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+    <str name="config">db-data-config.xml</str>
+    </lst>
+</requestHandler>
+
+
