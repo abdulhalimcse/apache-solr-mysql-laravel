@@ -21,12 +21,54 @@ Click highlighted solr-8.2.0.tgz.
 
 ![Donload Image 2](https://github.com/abdulhalimcse/solr-mysql-laravel/blob/master/img/click-after-taz-file.PNG)
 
-Click highlighted link https://www-us.apache.org/dist/lucene/solr/8.2.0/solr-8.2.0.tgz. 
+Click highlighted link https://www-us.apache.org/dist/lucene/solr/8.2.0/solr-8.2.0.tgz and keep it in opt folder. 
 
-After completed download, Please extract it.
+OR 
 
 ```html
 
+# cd /opt
+# wget https://www-us.apache.org/dist/lucene/solr/8.2.0/solr-8.2.0.tgz  
+
+```
+
+https://www-us.apache.org/dist/lucene/solr/
+
+After completing download, Please extract it.
+
+```html
+# tar -xvf solr-8.2.0.tgz
+```
+
+Open the limits.conf file
+
+```html
+# vi /etc/security/limits.conf
+```
+Add below text at last 
+
+```html
+solr soft nproc 65535
+solr hard nproc 65535
+solr soft nofile 65535
+solr hard nofile 65535
+```
+
+Create a User and follow commond
+
+```html
+# useradd solr
+# chown -R solr:solr solr-8.2.0
+# cd solr-8.2.0/bin/
+```
+
+Create a solr collection or core
+
+```html
+# su - solr
+# ./solr start
+# ./solr status
+# ./solr create -c testcollection -n data_driven_schema_configs
 ```
 
 
