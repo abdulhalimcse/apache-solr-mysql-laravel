@@ -4,7 +4,7 @@
 
 This tutorial will help you to install Apache Solr 8.2.0, import data from mysql and search using laravel 5/6 on CentOS 7 systems
 
-## Step 1 – Prerequsities
+## Step 1 - Prerequsities
 
 Apache Solr 8 required Java 8 or greater to run. 
 
