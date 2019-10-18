@@ -1,0 +1,1 @@
+# apache-solr-mysql-laravel
