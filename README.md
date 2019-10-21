@@ -150,5 +150,9 @@ Add this line after ``` <uniqueKey>id</uniqueKey> ```
 <field name="features" type="text_general" indexed="true" stored="true"/>
 ```
 
+# data import (full-import/delta-import)
 
+You need to full import from Solr Admin Panel. After full-import. it is showing like below 
+
+![Solr Admin Panel](https://github.com/abdulhalimcse/solr-mysql-laravel/blob/master/img/data-full-import-image.PNG)
 
